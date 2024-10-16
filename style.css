@@ -172,3 +172,7 @@ img {
 .nav li { 
     margin-right: 10px; 
 }
+
+.ul{
+    list-style-type: none;
+}
