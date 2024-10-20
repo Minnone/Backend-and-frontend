@@ -10,23 +10,30 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-        <header>
-            <div>
-                <img src="free-icon-correction-16770401.png" alt="Логотип" style="width: 10%;">
+    <header>
+        <div class="head">
+            <div class="image">
+                <img src="free-icon-correction-16770401.png" alt="Логотип" class="logo">
+            </div>
+            <div class="group">
                 <p>Группа: ЭФБО-09-23</p>
                 <p>Малыгин Артём Валерьевич</p>
             </div>
+        </div>
+            
             <div class="navigator">
                 <ul>
-                    <a href="#top">Главная</a>
-                    <a href="">Первый семестр</a>
-                    <a href="">Второй семестр</a>
-                    <a href="">Услуги</a>
-                    <a href="">Авторизация</a>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="">Первый семестр</a></li>
+                    <li><a href="index2.html">Второй семестр</a></li>
+                    <li><a href="">Услуги</a></li>
+                    <li><a href="">Авторизация</a></li>
+                    <li><a href="index3.html">таблицы</a></li>
                 </ul>
             </div>
-        </header>
-        <aside>
+        </div>
+    </header>
+    <div class="container">
             <div class="nav">
                 <ul  class="ul">
                     <li>Навигация по странице</li>
@@ -34,30 +41,40 @@
                     <li>Бэкенд</li>
                 </ul>
             </div>    
-        </aside>
-        <main>
+
+        <div class="text">
             <h1 name="top">Разработка веб-приложения</h1>
-            <div class="card" style="width: 18rem;">
+            <ul class="footerul">
+                <li>
+                    <div class="card" style="width: 18rem;">
+                        <img src="orig.webp" class="card-img-top" alt="me">
+                        <div class="card-body">
+                            <p class="card-text">Корпоративный сайт</p>
+                            <button type="order" class="open-modal">заказать</button>
+                    </div>
+                </li>
+                
+            
+            <li>
+                <div class="card" style="width: 18rem;">
                 <img src="orig.webp" class="card-img-top" alt="me">
                 <div class="card-body">
-                  <p class="card-text">Корпоративный сайт</p>
-                  <button type="order" class="open-modal">заказать</button>
+                    <p class="card-text">Корпоративный сайт</p>
+                    <button type="order" class="open-modal">заказать</button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            </li>
+            <li>
+                <div class="card" style="width: 18rem;">
                 <img src="orig.webp" class="card-img-top" alt="me">
                 <div class="card-body">
-                  <p class="card-text">Корпоративный сайт</p>
-                  <button type="order" class="open-modal">заказать</button>
+                    <p class="card-text">Корпоративный сайт</p>
+                    <button type="order" class="open-modal">заказать</button>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="orig.webp" class="card-img-top" alt="me">
-                <div class="card-body">
-                  <p class="card-text">Корпоративный сайт</p>
-                  <button type="order" class="open-modal">заказать</button>
-                </div>
-            </div>
+            </li>
+            </ul>
+            
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, nemo. Exercitationem molestiae veritatis animi ratione molestias reiciendis sint quam facilis eaque, odit, excepturi sapiente dolore similique accusamus nisi possimus. Iste, expedita. Eius minus quas quisquam sint illo libero sed excepturi sit dolorem eveniet minima at tempore quo vel consequatur ex ipsum veritatis alias, exercitationem perferendis in! Commodi fuga, in, tempora voluptas dolor eius corrupti et nulla a nobis, quaerat quam saepe atque. Nihil libero tempora fuga totam tenetur nesciunt? Magni pariatur, commodi quam dignissimos libero possimus error dolorem odio dolor eveniet maxime sequi, unde ad repellat sed veritatis? Rerum voluptatum aspernatur rem perferendis impedit recusandae fugit ipsum ipsa tenetur sed officia ab voluptates similique dolorem, enim ipsam, atque dolore quo ullam. Nulla error vitae, id, atque, eos aliquid voluptatum cumque voluptas quis consectetur rem! Debitis unde totam, facilis rerum aspernatur voluptas! Dicta asperiores eaque repudiandae sint cupiditate accusamus magnam molestiae dolor exercitationem vel ad molestias eius earum deleniti quibusdam delectus neque, quia facere ipsa, distinctio atque placeat iste blanditiis rerum. Magnam nobis porro aspernatur labore impedit earum, deleniti delectus blanditiis ab molestiae ut dolorem modi dolor ratione corporis natus quia explicabo in minus? Obcaecati, voluptatem distinctio sed, facilis vel expedita ipsam itaque voluptatibus nostrum placeat laboriosam nesciunt sit quam quo? Fugit esse, assumenda expedita accusantium vero quo ea in veniam debitis cum. Eaque delectus modi fugit dolore ullam error, a nesciunt eligendi illum nihil placeat incidunt atque amet qui expedita odit, dignissimos consequatur et repellat necessitatibus, totam illo. Aut ducimus, error porro corporis neque ipsum voluptate modi? Earum culpa hic aspernatur inventore? Repudiandae, rem unde? Non hic quos pariatur aut repellendus esse suscipit est, blanditiis, alias neque voluptatem quasi fugiat ea aspernatur rem. Iste error impedit mollitia labore aliquam non quisquam dicta voluptatem placeat aperiam! Aut beatae pariatur delectus ea!</p>
             <div class="modal" id="modal">
                 <div class='modal-content'>
@@ -73,7 +90,7 @@
                         </div>
                         <div>
                             <p>Ваш e-mail</p>
-                            <label for="email"><input type="email"></label>
+                            <label for="email"><input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"></label>
                         </div>
                         <div>
                             <p>Телефон</p>
@@ -102,16 +119,15 @@
                     <button class="close">Отправить заявку</button>
                 </div>
             </div>
-        </main>
-        <footer> 
+        </div>
             <div class="info">
-                <ul class="ul">
+                <ul class="footerul">
                     <li><p>© Малыгин Артём Валерьевич, 2024</p></li>
                     <li><a href=""><img src="1710963677_.png" alt="telegram"style="width: 5%;" ></a></li>
                     <li><a href=""><img src="1710963677_.png" alt="telegram"style="width: 5%;" ></a></li>
                 </ul>
             </div>   
-        </footer>
+        </div>
         <script src="index.js"></script>
         
 </body>

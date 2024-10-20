@@ -1,6 +1,15 @@
 .top{
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
 .top{
@@ -13,27 +22,28 @@
     margin: 0; 
     background-color: #f0f0f0; 
     overflow: hidden; 
+    display: inline;
 }
-  
+
 .navigator li {
     float: left; 
     padding: 10px; 
 }
-  
+
 .navigator a {
     display: block; 
     color: #333; 
     text-align: center; 
     padding: 10px 15px; 
-    text-decoration: none; 
+    text-decoration: none;
 }
-  
+
 .navigator a:hover {
     background-color: #ddd;
     color: #000;
     transition: background-color 0.3s ease; 
 }
-  
+
 .navigator a.active {
     background-color: #007bff;
     color: #fff;
@@ -50,6 +60,9 @@ img {
 }
 
 .card {
+    background-color:#f0f0f05d;
+    margin-left: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc; 
     padding: 20px;
     border-radius: 5px; 
@@ -57,22 +70,22 @@ img {
     transition: transform 0.3s ease; 
     width: 300px; 
 }
-  
+
 .card:hover {
     transform: scale(1.05); 
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
 }
-  
+
 .card img {
     width: 100%; 
     height: 100%; 
     margin-bottom: 1px;
 }
-  
+
 .card p {
     margin-bottom: 1px; 
 }
-  
+
 .card button {
     background-color: #007bff;
     color: white;
@@ -81,7 +94,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
 }
-  
+
 .card button:hover {
     background-color: #0056b3;
 }
@@ -100,7 +113,7 @@ img {
 }
 
 .logo{
-    width: 300px; 
+    width: 30px; 
     height: auto;
 }
 
@@ -116,11 +129,11 @@ img {
 .modal-content input[type="email"],
 .modal-content input[type="date"],
 .modal-content textarea {
- width: 30%;
- padding: 8px;
- border: 1px solid #ccc;
- border-radius: 3px;
- margin-bottom: 10px;
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
 }
 
 .close {
@@ -157,23 +170,42 @@ img {
     padding: 10px;
     border-bottom: 1px solid #ddd; 
 }
-  
+
 .info{
+    grid-area: info;
+    display: flex;
     list-style-type: none;
-}
-.nav{
-    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav {
-    display: flex; 
-}
-   
-.nav li { 
-    margin-right: 10px; 
+.nav{
+    grid-area: nav;
+    background-color:#ddd;
 }
 
 .ul{
     list-style-type: none;
-    background-color:#0056b3;
+}
+
+.text{
+    grid-area: text;
+    background-color:#aaa;
+}
+
+.container {
+    width: 100%;
+    margin-left: 0px;
+    display: grid; 
+    grid-template-columns: 0.4fr 1.6fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "nav text"
+        "info info"
+}
+
+.footerul li {
+    display: inline-block;
+    margin-right: 20px;
 }
