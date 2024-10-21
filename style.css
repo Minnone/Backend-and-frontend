@@ -195,8 +195,8 @@ img {
 
 .container {
     width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin: 0;
+    padding:0;
     display: grid; 
     grid-template-columns: 0.4fr 1.6fr; 
     grid-template-rows: 1fr 1fr; 
