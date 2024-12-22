@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     logCurrentTime();
     
     resetBackgroundColor(); 
-    changeBackgroundColor("lightblue"); 
+    changeBackgroundColor("lightgrey");
     
     toggleVisibility('.content'); 
     updateH1FromUrl(); 
@@ -108,4 +108,50 @@ document.addEventListener('DOMContentLoaded', () => {
     if (viewSecondSemesterButton) {
         viewSecondSemesterButton.addEventListener('click', toggleTableSemester);
     }
+
+    const paragraph = document.getElementById('animatedParagraph');
+    if (paragraph) {
+        paragraph.addEventListener('click', () => {
+            paragraph.style.backgroundColor = getRandomColor();
+        });
+    }
+
+    const showLecturesButton = document.getElementById('showLecturesButton');
+    const lecturesTable = document.getElementById('lecturesTable');
+
+    if (showLecturesButton && lecturesTable) {
+        showLecturesButton.addEventListener('click', () => {
+            lecturesTable.classList.toggle('show');
+        });
+    }
+
+    const addPracticeButton = document.getElementById('addPracticeButton');
+    const newPracticeInput = document.getElementById('newPracticeInput');
+    const practicesTableBody = document.getElementById('practicesTableBody');
+
+    if (addPracticeButton && newPracticeInput && practicesTableBody) {
+        addPracticeButton.addEventListener('click', () => {
+            const newPracticeText = newPracticeInput.value.trim();
+            if (newPracticeText) {
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td></td>
+                    <td>${newPracticeText}</td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox"></td>
+                `;
+                practicesTableBody.appendChild(newRow);
+                newPracticeInput.value = ''; // Очистить поле ввода
+            }
+        });
+    }
 });
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}

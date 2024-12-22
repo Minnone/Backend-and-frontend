@@ -386,3 +386,7 @@ footerul{
         margin: 0 10px;
     }
 }
+
+.show {
+    display: block !important;
+}

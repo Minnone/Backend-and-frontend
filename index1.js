@@ -1,32 +1,23 @@
-const imageElement = document.querySelector('img');
+document.addEventListener('DOMContentLoaded', () => {
+    const imageElement = document.querySelector('img[alt="me"]');
     if (imageElement) {
-        // Увеличение размера изображения при наведении
-        imageElement.addEventListener('mouseover', () => {
-            imageElement.style.transform = 'scale(1.1)';
-        });
-
-        // Возвращение к исходному размеру при уходе курсора
-        imageElement.addEventListener('mouseout', () => {
-            imageElement.style.transform = 'scale(1)';
-        });
+        let isOriginalImage = true; // Флаг для отслеживания состояния изображения
+        const originalSrc = imageElement.src; // Сохраняем исходный путь к изображению
+        const newSrc = 'favteacher.jpg'; // Путь к новому изображению
 
         // Замена изображения при клике
         imageElement.addEventListener('click', () => {
-            imageElement.src = 'favteacher.jpg';
+            if (isOriginalImage) {
+                imageElement.src = newSrc;
+            } else {
+                imageElement.src = originalSrc;
+            }
+            isOriginalImage = !isOriginalImage; // Переключаем флаг
         });
 
         // Показать предупреждение при двойном клике
         imageElement.addEventListener('dblclick', () => {
             alert("Не нажимайте слишком сильно, у меня не так много любимых учителей.");
         });
-
-        imageElement.style.transition = 'transform 0.5s ease'; // Устанавливаем плавный переход
-
-        imageElement.addEventListener('mouseover', function() {
-            imageElement.style.transform = 'rotate(360deg)'; // Вращаем изображение на 360 градусов
-        });
-
-        imageElement.addEventListener('mouseout', function() {
-            imageElement.style.transform = 'rotate(0deg)'; // Возвращаем изображение в исходное положение
-        });
     }
+});

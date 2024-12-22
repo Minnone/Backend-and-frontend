@@ -33,6 +33,8 @@ $(document).ready(function() {
     $('#phone-input').mask('+7 (000) 000-00-00');
 });
 
+//tetrad 11
+
 function submitForm() {
     const formData = new FormData();
     const formElements = document.querySelectorAll('[data-name]');
@@ -74,18 +76,6 @@ function submitForm() {
     });
 
     modal.style.display = "none";
-
-    // Показать сообщение с анимацией
-    formMessage.style.display = 'block';
-    formMessage.style.color = 'green'; // Начальный цвет
-    setTimeout(() => {
-        formMessage.style.color = 'red'; // Конечный цвет
-    }, 500);
 }
 
 document.querySelector('.aply').addEventListener('click', submitForm);
-
-function showMessage(message) {
-    console.log(message);
-}
-
